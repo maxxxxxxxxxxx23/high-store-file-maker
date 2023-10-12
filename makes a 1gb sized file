@@ -12,6 +12,6 @@ def generate_gigabyte_file(file_path):
             f.write(chunk)
 
 if __name__ == "__main__":
-    file_path = "C:\\Users\\maxte\\Documents\\delete\\storage.txt"
+    file_path = "C:\\Users\\*****\\Documents\\delete\\storage.txt"
     generate_gigabyte_file(file_path)
     print(f"Gigabyte-sized file generated at: {file_path}")
