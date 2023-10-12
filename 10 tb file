@@ -1,0 +1,23 @@
+import os
+
+def generate_1_tb_file(file_path):
+    one_tb = 1024 * 1024 * 1024 * 1024  # 1 terabyte in bytes
+
+    # Open the file in binary write mode
+    with open(file_path, 'wb') as f:
+        # Write random bytes to the file in chunks until it reaches 1 terabyte
+        while os.path.getsize(file_path) < one_tb:
+            # Generate 100 GB of random data at a time
+            chunk = os.urandom(100 * 1024 * 1024)
+            f.write(chunk)
+
+def generate_10_tb_file(base_file_path):
+    for i in range(10):
+        file_path = f"{base_file_path}_{i}.txt"
+        generate_1_tb_file(file_path)
+        print(f"Generated 1-terabyte file: {file_path}")
+
+if __name__ == "__main__":
+    base_file_path = "C:\\Users\\******\\Documents\\delete\\10_tb_storage"
+    generate_10_tb_file(base_file_path)
+    print("10-terabyte file generated successfully.")
