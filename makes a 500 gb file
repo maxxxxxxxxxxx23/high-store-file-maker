@@ -1,0 +1,17 @@
+import os
+
+def generate_500_gb_file(file_path):
+    five_hundred_gb = 500 * 1024 * 1024 * 1024  # 500 gigabytes in bytes
+
+    # Open the file in binary write mode
+    with open(file_path, 'wb') as f:
+        # Write random bytes to the file in chunks until it reaches 500 gigabytes
+        while os.path.getsize(file_path) < five_hundred_gb:
+            # Generate 10 MB of random data at a time
+            chunk = os.urandom(10 * 1024 * 1024)
+            f.write(chunk)
+
+if __name__ == "__main__":
+    file_path = "C:\\Users\\maxte\\Documents\\delete\\500_gb_storage.txt"
+    generate_500_gb_file(file_path)
+    print(f"500-gigabyte file generated at: {file_path}")
