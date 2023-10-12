@@ -18,6 +18,6 @@ def generate_1_tb_file(base_file_path):
         print(f"Generated 100-gigabyte file: {file_path}")
 
 if __name__ == "__main__":
-    base_file_path = "C:\\Users\\maxte\\Documents\\delete\\1_tb_storage"
+    base_file_path = "C:\\Users\\****\\Documents\\delete\\1_tb_storage"
     generate_1_tb_file(base_file_path)
     print("1-terabyte file generated successfully.")
